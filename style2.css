@@ -1,0 +1,227 @@
+/* style2.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('https://www.w3schools.com/w3images/forest.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+    margin: 20px;
+}
+
+.container, .form-container {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 1000px;
+    margin: auto;
+    backdrop-filter: blur(2px);
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.2em;
+    color: #ffcc00;
+}
+
+h2 {
+    margin-top: 20px;
+    color: #ffcc00;
+}
+
+/* Галерея изображений */
+.image-gallery {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+
+.gallery-item {
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item img {
+    border-radius: 15px;
+    border: 3px solid #ffcc00;
+}
+
+.gallery-item p {
+    margin-top: 8px;
+}
+
+/* Видео секция */
+.video-section {
+    margin: 30px 0;
+    text-align: center;
+}
+
+video {
+    border-radius: 15px;
+    max-width: 100%;
+}
+
+/* Поиск */
+.search-box {
+    background: rgba(255,255,255,0.9);
+    padding: 20px;
+    border-radius: 15px;
+    margin: 30px 0;
+    text-align: center;
+    color: #000;
+    text-shadow: none;
+}
+
+.search-box input {
+    padding: 12px;
+    width: 60%;
+    border-radius: 30px;
+    border: none;
+    margin-right: 10px;
+    font-size: 1em;
+}
+
+.search-box button {
+    padding: 12px 25px;
+    background: #ffcc00;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.search-box button:hover {
+    background: #e6b800;
+    transform: scale(1.02);
+}
+
+/* Кнопка с эффектом */
+.fancy-btn {
+    background: linear-gradient(45deg, #ffcc00, #ff8800);
+    color: #000;
+    padding: 15px 40px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 20px 0;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.fancy-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.5);
+}
+
+/* Ссылки */
+.link-list {
+    margin: 20px 0;
+}
+
+.link-list a {
+    display: inline-block;
+    color: #ffcc00;
+    margin: 5px 15px 5px 0;
+    text-decoration: none;
+}
+
+.link-list a:hover {
+    text-decoration: underline;
+}
+
+/* Форма */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1em;
+}
+
+.radio-group, .checkbox-group {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.radio-group label, .checkbox-group label {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: normal;
+}
+
+fieldset {
+    border: 1px solid #ffcc00;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+legend {
+    padding: 0 10px;
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+.grade-select {
+    background: #f0f0f0;
+    padding: 15px;
+    border-radius: 10px;
+    color: #000;
+    text-shadow: none;
+    margin-bottom: 20px;
+}
+
+.grade-select select {
+    margin-left: 10px;
+    padding: 5px;
+}
+
+.submit-btn {
+    background: #ffcc00;
+    color: #000;
+    padding: 12px 30px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+.reset-btn {
+    background: #666;
+    color: #fff;
+    padding: 12px 30px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 30px;
+    color: #ffcc00;
+    text-decoration: none;
+}

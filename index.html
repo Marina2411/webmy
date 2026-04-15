@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Техно Мир | Главная</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Техно Мир</h1>
+    <hr>
+
+    <div class="nav-links">
+        <a href="index.html">Главная</a>
+        <a href="page2.html">Галерея</a>
+        <a href="page3.html">Контакты</a>
+    </div>
+
+    <h2>Добро пожаловать в мир технологий</h2>
+    <p>Современные технологии меняют нашу жизнь каждый день. Искусственный интеллект, робототехника, виртуальная реальность — всё это становится частью нашего будущего уже сегодня.</p>
+
+    <div class="highlight">
+        <p>Более 5 миллиардов человек во всём мире используют интернет ежедневно. Технологии объединяют нас, открывают новые возможности для обучения, работы и творчества.</p>
+    </div>
+
+    <h2>Ключевые направления</h2>
+    <div class="stats">
+        <div class="stat-card">
+            <div class="stat-number">AI</div>
+            <p>Искусственный интеллект</p>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">IoT</div>
+            <p>Интернет вещей</p>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">VR</div>
+            <p>Виртуальная реальность</p>
+        </div>
+    </div>
+
+    <h2>Сравнение технологий</h2>
+    <table>
+        <tr>
+            <th>Технология</th>
+            <th>Год появления</th>
+            <th>Основное применение</th>
+        </tr>
+        <tr>
+            <td>Искусственный интеллект</td>
+            <td>1956</td>
+            <td>Анализ данных, автоматизация</td>
+        </tr>
+        <tr>
+            <td>Блокчейн</td>
+            <td>2008</td>
+            <td>Финансы, безопасность</td>
+        </tr>
+        <tr>
+            <td>Квантовые компьютеры</td>
+            <td>2010</td>
+            <td>Научные расчёты</td>
+        </tr>
+    </table>
+
+    <div class="footer">
+        <p>Последнее обновление: <span id="updateDate"></span> | Посещений: <span id="counter">0</span></p>
+    </div>
+</div>
+
+<script>
+    document.getElementById('updateDate').innerText = new Date().toLocaleString();
+    let count = localStorage.getItem('visitCount');
+    count = count ? parseInt(count) + 1 : 1;
+    localStorage.setItem('visitCount', count);
+    document.getElementById('counter').innerText = count;
+</script>
+</body>
+</html>

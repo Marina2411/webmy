@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Техно Мир | Галерея</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+<div class="container">
+    <h1>Галерея технологий</h1>
+
+    <div class="nav-links" style="display: flex; justify-content: center; gap: 30px; margin-bottom: 30px;">
+        <a href="index.html" style="color:#ffcc00;">Главная</a>
+        <a href="page2.html" style="color:#ffcc00;">Галерея</a>
+        <a href="page3.html" style="color:#ffcc00;">Контакты</a>
+    </div>
+
+    <div class="image-gallery">
+        <div class="gallery-item" onclick="location.href='page3.html'">
+            <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="AI" width="120">
+            <p>Искусственный интеллект</p>
+        </div>
+        <div class="gallery-item" onclick="location.href='page3.html'">
+            <img src="https://cdn-icons-png.flaticon.com/512/924/924915.png" alt="VR" width="120">
+            <p>Виртуальная реальность</p>
+        </div>
+    </div>
+
+    <div class="video-section">
+        <h2>Видео и аудио, которые сгенерированы нейросетью</h2>
+        <video width="500" controls>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Ваш браузер не поддерживает видео.
+        </video>
+        <audio controls style="margin-top: 20px;">
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <div class="search-box">
+        <h3>Поиск в интернете</h3>
+        <form action="https://www.google.com/search" target="_blank" method="GET">
+            <input type="text" name="q" placeholder="Что найти?">
+            <button type="submit">Искать</button>
+        </form>
+    </div>
+
+    <button class="fancy-btn" id="magicBtn">Нажми меня</button>
+
+    <div class="link-list">
+        <h3>Полезные ресурсы</h3>
+        <a href="https://habr.com" target="_blank">Habr</a>
+        <a href="https://github.com" target="_blank">GitHub</a>
+        <a href="https://stackoverflow.com" target="_blank">Stack Overflow</a>
+    </div>
+
+    <a class="back-link" href="index.html">← На главную</a>
+</div>
+
+<script>
+    const btn = document.getElementById('magicBtn');
+    btn.addEventListener('click', function() {
+        btn.innerText = 'Спасибо!';
+        btn.style.background = '#9b59b6';
+        setTimeout(() => {
+            btn.innerText = 'Нажми меня';
+            btn.style.background = 'linear-gradient(45deg, #ffcc00, #ff8800)';
+        }, 1000);
+    });
+</script>
+</body>
+</html>

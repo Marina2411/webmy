@@ -1,0 +1,138 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('https://www.w3schools.com/w3images/forest.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+    margin: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 1100px;
+    margin: auto;
+    backdrop-filter: blur(2px);
+}
+
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+hr {
+    border: none;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #ffcc00, transparent);
+    margin: 20px 0;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-top: 20px;
+    color: #ffcc00;
+}
+
+p {
+    line-height: 1.6;
+    margin: 15px 0;
+    font-size: 1.1em;
+}
+
+.highlight {
+    background: rgba(255, 204, 0, 0.2);
+    padding: 15px;
+    border-left: 5px solid #ffcc00;
+    margin: 20px 0;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    width: 200px;
+}
+
+.stat-number {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background: rgba(255, 204, 0, 0.3);
+    font-size: 1.1em;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px 0 20px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 8px 20px;
+    border: 2px solid #ffcc00;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    background: #ffcc00;
+    color: #000;
+    text-shadow: none;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    font-size: 0.9em;
+}
