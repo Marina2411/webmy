@@ -12,7 +12,7 @@
     <div class="nav-links" style="display: flex; justify-content: center; gap: 30px; margin-bottom: 30px;">
         <a href="index.html">Главная</a>
         <a href="page2.html">Галерея</a>
-        <a href="page3.html">Контактыыыыыыыыы</a>
+        <a href="page3.html">Контакты</a>
     </div>
 
     <form id="contactForm">
@@ -86,52 +86,12 @@
 </div>
 
 <script>
-    // ВАШИ ДАННЫЕ ДЛЯ TELEGRAM
-    const BOT_TOKEN = '8793992470:AAGuIhgSKW1LAxZdLRZVOlxdZEXggow5MWc';
-    const CHAT_ID = '818159509';
-    
     const submitBtn = document.getElementById('submitBtn');
 
-    async function sendToTelegram(message) {
-        const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
-        try {
-            const response = await fetch(url, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    chat_id: CHAT_ID,
-                    text: message,
-                    parse_mode: 'HTML'
-                })
-            });
-            const result = await response.json();
-            return result.ok === true;
-        } catch (error) {
-            console.error('Ошибка отправки:', error);
-            return false;
-        }
-    }
-
-    submitBtn.addEventListener('click', async function() {
+    submitBtn.addEventListener('click', function(e) {
         // Собираем данные из формы
         const surname = document.getElementById('surname').value.trim();
         const name = document.getElementById('name').value.trim();
-        const patronymic = document.getElementById('patronymic').value.trim();
-        
-        const gender = document.querySelector('input[name="gender"]:checked');
-        const genderValue = gender ? gender.value : 'не указан';
-        
-        const department = document.getElementById('department').value;
-        
-        const zachets = [];
-        document.querySelectorAll('input[name^="zachet"]:checked').forEach(cb => {
-            zachets.push(cb.value);
-        });
-        
-        const mathGrade = document.getElementById('math_grade').value;
-        const physicsGrade = document.getElementById('physics_grade').value;
-        const progGrade = document.getElementById('prog_grade').value;
-        const comment = document.getElementById('comment').value.trim();
         
         // Проверка обязательных полей
         if (!surname || !name) {
@@ -139,39 +99,8 @@
             return;
         }
         
-        // Формируем красивое сообщение для Telegram
-        let message = '<b>📝 НОВАЯ АНКЕТА С САЙТА</b>\n\n';
-        message += `👤 <b>ФИО:</b> ${surname} ${name} ${patronymic || '—'}\n`;
-        message += `⚥ <b>Пол:</b> ${genderValue}\n`;
-        message += `🏫 <b>Отделение:</b> ${department}\n`;
-        message += `✅ <b>Зачёты сданы:</b> ${zachets.length ? zachets.join(', ') : 'нет'}\n`;
-        message += `📊 <b>Оценки:</b>\n`;
-        message += `   • Математика: ${mathGrade}\n`;
-        message += `   • Физика: ${physicsGrade}\n`;
-        message += `   • Программирование: ${progGrade}\n`;
-        if (comment) message += `\n💬 <b>Комментарий:</b>\n${comment}\n`;
-        message += `\n🕐 <i>${new Date().toLocaleString()}</i>`;
-        
-        // Сохраняем в localStorage
-        const formData = {
-            surname, name, patronymic, gender: genderValue, department,
-            zachets, math_grade: mathGrade, physics_grade: physicsGrade,
-            prog_grade: progGrade, comment: comment || 'без комментария',
-            date: new Date().toLocaleString()
-        };
-        localStorage.setItem('anketaData', JSON.stringify(formData));
-        
-        // Отправляем в Telegram
-        const sent = await sendToTelegram(message);
-        
-        if (sent) {
-            alert('Анкета успешно отправлена в Telegram! Переход на главную страницу.');
-        } else {
-            alert('Анкета сохранена локально, но не отправлена в Telegram. Проверьте подключение к интернету.\nПереход на главную страницу.');
-        }
-        
-        // Переход на главную страницу
-        window.location.href = 'index.html';
+        // Моментальный переход на главную страницу
+        window.location.replace('index.html');
     });
 </script>
 </body>
